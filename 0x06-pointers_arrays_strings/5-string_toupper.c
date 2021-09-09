@@ -1,20 +1,19 @@
-#include "holberton.h"
-
+#include"main.h"
 /**
- * string_toupper - lower to upper
- * @s: pointer to char params
- *
- * Return: *s
+ * string_toupper - fonction toupper
+ * @a: pointer
+ * Return: pointer in return
  */
-
-char *string_toupper(char *s)
+char *string_toupper(char *a)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; a[i] != 0; i++)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] -= 32;
+		if (a[i] > 90 && a[i] != 10)
+		{
+			a[i] = a[i] - 32;
+		}
 	}
-	return (s);
+	return (a);
 }

@@ -1,27 +1,23 @@
-#include "holberton.h"
-
+#include "main.h"
+#include <stdio.h>
 /**
- * reverse_array - reverse
- * @a : pointer to int params
- * @n : pointer to int params
- * Return: no
+ * reverse_array - reversing function.
+ * @a: pointer
+ * @n: pointer
+ * Return: No return
  */
-
 void reverse_array(int *a, int n)
 {
-	int i;
-	int j;
-	int tmp;
+	int i, j, d;
 
-	i = 0;
-	j = n - 1;
-
-	while (i < j)
+	if (n % 2 != 0)
+		d = n + 1;
+	else
+		d = n;
+	for (i = 0; i < d / 2; i++)
 	{
-		tmp = a[i];
-		a[i] = a[j];
-		a[j] = tmp;
-		i++;
-		j--;
+		j = a[i];
+		a[i] = a[n - 1 - i];
+		a[n - 1 - i] = j;
 	}
 }
